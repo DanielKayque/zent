@@ -1,0 +1,105 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 480px){
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.buttons{
+  display: flex;
+}
+
+.title h1 {
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--color-gradient-violet), var(--color-gradient-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.title p {
+  color: var(--text-muted);
+}
+
+.createButton {
+  background: linear-gradient(135deg, var(--color-gradient-violet), var(--color-gradient-fuchsia));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.createButtonSm{
+  /* background: linear-gradient(135deg, var(--color-gradient-violet), var(--color-gradient-fuchsia)); */
+  color: var(--color-gradient-violet);
+  border: none;
+  padding: 0.25rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.createButton:hover {
+  opacity: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.eventCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: transform 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gradient-violet);
+}
+
+.eventCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.eventCard p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-gradient-blue);
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

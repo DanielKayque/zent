@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+// import "@/app/globals.css";
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
-import { AuthProvider } from '@/context/AuthContext';
+import PrivateRoute from '../components/Auth/PrivateRoute';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,10 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
-      <body className="antialiased">
-        <AuthProvider>{children}</AuthProvider>
-      </body>
-    </html>
+    <PrivateRoute>
+      <div className={'antialiased' + inter.variable}>
+        {children}
+        <Footer />
+      </div>
+    </PrivateRoute>
   );
 }
