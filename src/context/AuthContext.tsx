@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       
       setLoading(false);
       console.log(currentUser);
-      redirect('/dashboard')
+      // redirect('/dashboard')
     });
 
     return () => unsubscribe();

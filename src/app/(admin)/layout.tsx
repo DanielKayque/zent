@@ -24,10 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <PrivateRoute>
-      <div className={'antialiased' + inter.variable}>
-        {children}
-        <Footer />
-      </div>
+      {children}
+      <Footer />
     </PrivateRoute>
   );
 }

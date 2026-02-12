@@ -8,6 +8,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
+import { redirect } from 'next/navigation';
 
 // Interface temporária para os dados
 interface Evento {
@@ -83,6 +84,7 @@ export default function DashboardPage() {
   if (!user) {
     return null; // O PrivateRoute já vai redirecionar, mas por segurança retornamos null
   }
+
   return (
     <main className={styles.container}>
       <header className={styles.header}>
@@ -91,7 +93,12 @@ export default function DashboardPage() {
           <p>Gerencie suas inscrições e check-ins em tempo real.</p>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.createButton}>+ Novo Evento</button>
+          <button
+            onClick={() => redirect('/dashboard/novo')}
+            className={styles.createButton}
+          >
+            + Novo Evento
+          </button>
 
           <LogoutButton />
         </div>

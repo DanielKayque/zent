@@ -24,11 +24,12 @@ export default function EventoDetalhesPage() {
   const { user } = useAuth();
   const [evento, setEvento] = useState<Evento | null>(null);
   const [loading, setLoading] = useState(true);
+  if (id === 'novo') return null;
 
   const publicUrl =
     typeof window !== 'undefined'
-      ? `${window.location.origin}/evento/${id}`
-      : `/evento/${id}`;
+      ? `${window.location.origin}/eventos/${id}`
+      : `/eventos/${id}`;
 
   // ... (Sua lógica do useEffect permanece idêntica) ...
   useEffect(() => {
@@ -119,13 +120,10 @@ export default function EventoDetalhesPage() {
         <aside>
           <div className={styles.cardMetric}>
             <div style={{ marginTop: '1.5rem' }}>
-             {evento && (
-               <QRCodeManager
-                 url={publicUrl} 
-                 nomeEvento={evento.nome} 
-               />
-             )}
-          </div>
+              {evento && (
+                <QRCodeManager url={publicUrl} nomeEvento={evento.nome} />
+              )}
+            </div>
             <h4>Total de Inscritos</h4>
             <div className={styles.metricValue}>{evento.totalInscritos}</div>
             <div className={styles.progressBar}>

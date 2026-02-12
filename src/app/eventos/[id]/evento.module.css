@@ -1,0 +1,198 @@
+/* Container Principal (Fundo da página) */
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-base); /* Fundo escuro padrão do site */
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- Hero Section (Imagem de topo) --- */
+.hero {
+  width: 100%;
+  height: 35vh; /* Ocupa 35% da altura da tela */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1b4b, #2e1065); /* Fallback se não tiver imagem */
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* Gradiente para suavizar a transição da imagem para o fundo */
+.heroOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--bg-base), transparent);
+}
+
+/* --- Conteúdo Centralizado --- */
+.contentWrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 600px; /* Mais estreito para focar na leitura (estilo mobile-first) */
+  margin: -80px auto 0; /* Sobe o card para cima da imagem */
+  padding: 0 1.5rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* O Cartão Principal (Glassmorphism) */
+.card {
+  background: rgba(15, 23, 42, 0.95); /* Quase opaco para leitura */
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Etiqueta "Evento Oficial" */
+.tag {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-gradient-violet);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* Grid de Informações (Data e Local) */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  background: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  border: 1px solid var(--glass-border);
+}
+
+.infoItem p {
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Descrição do Evento */
+.description h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.description p {
+  color: #94a3b8;
+  line-height: 1.6;
+  white-space: pre-wrap; /* Respeita as quebras de linha do texto original */
+}
+
+/* --- Área de Ação (Botão) --- */
+.actionArea {
+  margin-top: 2.5rem;
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.1), transparent);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.price {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-gradient-violet);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btnSubscribe {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-gradient-violet), var(--color-gradient-fuchsia));
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btnSubscribe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.4);
+}
+
+.btnSubscribe:active {
+  transform: translateY(0);
+}
+
+/* Rodapé Simples */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .hero {
+    height: 45vh; /* Imagem maior em desktop */
+  }
+  
+  .contentWrapper {
+    margin-top: -120px; /* Sobe mais o card no desktop */
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr 1fr; /* Lado a lado em telas maiores */
+  }
+}
