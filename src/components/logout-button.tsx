@@ -16,7 +16,7 @@ export function LogoutButton() {
   };
 
   return (
-    <button onClick={handleLogout} className='text-gradient-fuchsia ml-4'>
+    <button onClick={handleLogout} className='text-gradient-fuchsia ml-4 cursor-pointer'>
       <LogOut />
     </button>
   );

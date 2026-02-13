@@ -30,7 +30,7 @@ export default function NovoEventoPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
     if (!user) return;
 
@@ -50,8 +50,8 @@ export default function NovoEventoPage() {
         bannerUrl: formData.bannerUrl,
         // Capacidade vira número (ou 0 se vazio)
         capacidade: Number(formData.capacidade) || 0,
-        totalInscritos: 0, // Começa zerado
-        organizadorId: user.uid, // O CAMPO MAIS IMPORTANTE
+        totalInscritos: 0, //
+        organizadorId: user.uid,
         criadoEm: Timestamp.now(),
         ativo: true,
       });
@@ -74,7 +74,6 @@ export default function NovoEventoPage() {
       </header>
 
       <form onSubmit={handleSubmit} className={styles.formCard}>
-        {/* Nome do Evento */}
         <div className={styles.formGroup}>
           <label htmlFor="nome" className={styles.label}>
             Nome do Evento
