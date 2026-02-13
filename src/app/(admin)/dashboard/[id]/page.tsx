@@ -24,7 +24,7 @@ export default function EventoDetalhesPage() {
   const { user } = useAuth();
   const [evento, setEvento] = useState<Evento | null>(null);
   const [loading, setLoading] = useState(true);
-  if (id === 'novo') return null;
+  // if (id === 'novo') return null;
 
   const publicUrl =
     typeof window !== 'undefined'

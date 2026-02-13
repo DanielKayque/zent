@@ -1,9 +1,9 @@
 import { db } from '@/lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { notFound } from 'next/navigation';
-import styles from './evento.module.css'; // Crie um CSS similar ao do dashboard mas simplificado
+import styles from './evento.module.css';
+import BotaoInscricao from './botao-inscricao';
 
-// No Next.js 15, params é uma Promise
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -63,10 +63,7 @@ export default async function EventoPublicoPage({ params }: PageProps) {
           {/* Área de Inscrição */}
           <div className={styles.actionArea}>
             <p className={styles.price}>Entrada Gratuita</p>
-            {/* Aqui você colocará o componente de Formulário de Inscrição depois */}
-            <button className={styles.btnSubscribe}>
-              Confirmar Presença
-            </button>
+            <BotaoInscricao eventoId={id}/>
           </div>
         </div>
 
