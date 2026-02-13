@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { QrCode, Menu } from "lucide-react";
-import { useState } from "react";
-import styles from "./Navbar.module.css";
+import Link from 'next/link';
+import { QrCode, Menu } from 'lucide-react';
+import { useState } from 'react';
+import styles from './Navbar.module.css';
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,7 +28,7 @@ export function Navbar() {
             </li>
           </ul>
           <Link href="/login" className={styles.cta}>
-            Começar Agora
+            Fazer Login
           </Link>
           <button
             type="button"
@@ -52,7 +52,11 @@ export function Navbar() {
           <Link href="#sobre" onClick={() => setMobileOpen(false)}>
             Sobre
           </Link>
-          <Link href="#cta" className={styles.mobileCta} onClick={() => setMobileOpen(false)}>
+          <Link
+            href="#cta"
+            className={styles.mobileCta}
+            onClick={() => setMobileOpen(false)}
+          >
             Começar Agora
           </Link>
         </div>

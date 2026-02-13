@@ -13,7 +13,11 @@ export function Footer() {
         </p>
         <ul className={styles.social}>
           <li>
-            <Link href="https://github.com/DanielKayque/" aria-label="GitHub">
+            <Link
+              href="https://github.com/DanielKayque/"
+              target="_blank"
+              aria-label="GitHub"
+            >
               <Github size={18} />
             </Link>
           </li>
@@ -26,6 +30,7 @@ export function Footer() {
             <Link
               href="https://www.linkedin.com/in/daniel-kayque"
               aria-label="LinkedIn"
+              target="_blank"
             >
               <Linkedin size={18} />
             </Link>
