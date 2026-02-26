@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zent - Gestão de Eventos 🎟️
 
-## Getting Started
+SaaS (Software as a Service) focado em simplicidade e na melhor experiência do usuário (UX) para gerenciamento completo de eventos, desde a criação até o controle de portaria.
 
-First, run the development server:
+## 🚀 Tecnologias usadas
+- Next.js
+- TypeScript
+- Firebase (Autenticação e Banco de Dados)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧩 Funcionalidades
+Criação rápida e intuitiva de novos eventos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Captação e visualização da lista de inscritos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Sistema de Check-in inteligente via leitura de QR Code em tempo real
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Interface responsiva e otimizada com foco em UX para mobile e desktop
 
-## Learn More
+## 💡 Habilidades Aplicadas
+TypeScript: Tipagem estática com Interfaces e Types para maior segurança no código
 
-To learn more about Next.js, take a look at the following resources:
+Backend as a Service: Integração com Firebase para banco de dados e autenticação de usuários
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+UI/UX: Design de interface focado na jornada do usuário e facilidade de uso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Roteamento: Gerenciamento de rotas e renderização eficiente com Next.js
 
-## Deploy on Vercel
+## 📦 Deploy
+https://zent-gamma.vercel.app/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Demonstração
+<img width="1897" height="898" alt="Captura de tela 2026-02-11 222950" src="https://github.com/user-attachments/assets/c11d84c3-667e-43b2-af0e-096faf843f96" />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img width="1919" height="902" alt="Captura de tela 2026-02-11 223044" src="https://github.com/user-attachments/assets/b3445808-43af-4527-aa5e-158518b6cd06" />
+
+<img width="1899" height="907" alt="Captura de tela 2026-02-11 223247" src="https://github.com/user-attachments/assets/78bf44a1-8dd9-46d3-be81-ebc0ee779b38" />
+
+<img width="1917" height="868" alt="Captura de tela 2026-02-11 223217" src="https://github.com/user-attachments/assets/fa488111-1fa7-436d-a849-07b943cdaec1" />
+
